@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { Box, Avatar, Typography, Button, IconButton } from "@mui/material";
 import { useAuth } from "../context/AuthContext";
 import green from "@mui/material/colors/green";
@@ -158,7 +158,7 @@ const Chat = () => {
             fontWeight: "600",
           }}
         >
-          Modèle - GPT 3.5 Turbo
+          Modèle - GPT-4o Turbo
         </Typography>
         <Box
           sx={{
@@ -175,7 +175,6 @@ const Chat = () => {
           }}
         >
           {chatMessages.map((chat, index) =>
-            //@ts-ignore
             //<ChatItem content={chat.content} role={chat.role} key={index} />
             chat ? (
               <ChatItem content={chat.content} role={chat.role} key={index} />
